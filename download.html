@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Mr. Auto Typer - Get the Latest Version</title>
+    <title>Download Mr. Auto Typer - Free Auto Typer Software | Unduh Aplikasi Auto Ketik Gratis</title>
+    <meta name="description" content="Download Mr. Auto Typer, the free intelligent text automation tool for Windows, macOS, and Linux. Get the latest version with customizable delays and human-like jitter. | Unduh Mr. Auto Typer, alat otomatisasi teks cerdas gratis untuk Windows, macOS, dan Linux. Dapatkan versi terbaru dengan penundaan yang dapat disesuaikan dan jitter seperti manusia.">
+    <meta name="keywords" content="download auto typer, free auto typer, auto ketik gratis, unduh aplikasi auto ketik, windows, macos, linux, text automation software, aplikasi pengetikan otomatis, alat produktivitas">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mr-auto-typer.com/download.html">
+    <meta property="og:title" content="Download Mr. Auto Typer - Free Auto Typer Software">
+    <meta property="og:description" content="Download Mr. Auto Typer, the free intelligent text automation tool for Windows, macOS, and Linux. Get the latest version with customizable delays and human-like jitter.">
+    <meta property="og:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mr-auto-typer.com/download.html">
+    <meta property="twitter:title" content="Download Mr. Auto Typer - Free Auto Typer Software">
+    <meta property="twitter:description" content="Download Mr. Auto Typer, the free intelligent text automation tool for Windows, macOS, and Linux. Get the latest version with customizable delays and human-like jitter.">
+    <meta property="twitter:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ug2yl5wazd");
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -181,7 +204,7 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" onclick="downloadFile('windows')">
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-windows">
                         Download for Windows
                     </button>
                     
@@ -218,7 +241,7 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" onclick="downloadFile('macos')">
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-macos">
                         Download for macOS
                     </button>
                     
@@ -255,7 +278,7 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" onclick="downloadFile('linux')">
+                    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-linux">
                         Download for Linux
                     </button>
                     
@@ -597,6 +620,11 @@
             document.querySelectorAll('.download-card, .hover-lift').forEach(el => {
                 observer.observe(el);
             });
+
+            // Add event listeners for download buttons
+            document.getElementById('download-windows').addEventListener('click', () => downloadFile('windows'));
+            document.getElementById('download-macos').addEventListener('click', () => downloadFile('macos'));
+            document.getElementById('download-linux').addEventListener('click', () => downloadFile('linux'));
         });
         
         // OS Detection
