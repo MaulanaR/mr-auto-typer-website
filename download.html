@@ -204,9 +204,9 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-windows">
+                    <a href="https://github.com/MaulanaR/mr-auto-typer/releases/download/exp2/mr-auto-typer.exe" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4 text-center block" download>
                         Download for Windows
-                    </button>
+                    </a>
                     
                     <div class="text-xs text-gray-500 text-center">
                         <a href="#requirements" class="text-blue-600 hover:underline">System Requirements</a>
@@ -241,9 +241,9 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-macos">
+                    <a href="#" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4 text-center block" onclick="alert('Download for macOS is not yet available. Please check back later!'); return false;">
                         Download for macOS
-                    </button>
+                    </a>
                     
                     <div class="text-xs text-gray-500 text-center">
                         <a href="#requirements" class="text-blue-600 hover:underline">System Requirements</a>
@@ -278,9 +278,9 @@
                         </div>
                     </div>
                     
-                    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4" id="download-linux">
+                    <a href="https://github.com/MaulanaR/mr-auto-typer/releases/download/exp2/mr-auto-typer" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg hover-lift mb-4 text-center block" download>
                         Download for Linux
-                    </button>
+                    </a>
                     
                     <div class="text-xs text-gray-500 text-center">
                         <a href="#requirements" class="text-blue-600 hover:underline">System Requirements</a>
@@ -620,11 +620,6 @@
             document.querySelectorAll('.download-card, .hover-lift').forEach(el => {
                 observer.observe(el);
             });
-
-            // Add event listeners for download buttons
-            document.getElementById('download-windows').addEventListener('click', () => downloadFile('windows'));
-            document.getElementById('download-macos').addEventListener('click', () => downloadFile('macos'));
-            document.getElementById('download-linux').addEventListener('click', () => downloadFile('linux'));
         });
         
         // OS Detection
@@ -634,34 +629,6 @@
             if (userAgent.indexOf("Mac") != -1) return "macos";
             if (userAgent.indexOf("Linux") != -1) return "linux";
             return "unknown";
-        }
-
-        // Download functionality
-        function downloadFile(platform) {
-            const downloadLinks = {
-                windows: 'https://github.com/MaulanaR/mr-auto-typer/releases/download/exp2/mr-auto-typer.exe',
-                macos: '#', // Placeholder for macOS
-                linux: 'https://github.com/MaulanaR/mr-auto-typer/releases/download/exp2/mr-auto-typer'  // Placeholder for Linux
-            };
-
-            const platformNames = {
-                windows: 'Windows',
-                macos: 'macOS',
-                linux: 'Linux'
-            };
-
-            const url = downloadLinks[platform];
-
-            if (url && url !== '#') {
-                window.open(url, '_blank');
-                showDownloadModal(platformNames[platform]);
-            } else {
-                alert(`Download for ${platformNames[platform]} is not yet available. Please check back later!`);
-            }
-        }
-
-        function showDownloadModal(platform) {
-            alert(`Download started for ${platform}!\n\nThank you for choosing Mr. Auto Typer!`);
         }
 
         // Donation functionality
