@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Auto Typer - Free Intelligent Text Automation Tool | Auto Ketik Teks Otomatis Terbaik</title>
-    <meta name="description" content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity. | Mr. Auto Typer adalah alat otomatisasi teks cerdas gratis untuk Windows, macOS, dan Linux. Otomatiskan pengetikan dengan penundaan yang dapat disesuaikan, jitter seperti manusia, dan preset yang kuat untuk produktivitas yang lebih baik.">
-    <meta name="keywords" content="auto typer, text automation, free auto typer, auto ketik, otomatisasi teks, software auto ketik, human-like typing, typing bot, macro keyboard, productivity tool, windows, macos, linux, alat produktivitas, otomatisasi pengetikan">
-    
+    <meta name="description"
+        content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity. | Mr. Auto Typer adalah alat otomatisasi teks cerdas gratis untuk Windows, macOS, dan Linux. Otomatiskan pengetikan dengan penundaan yang dapat disesuaikan, jitter seperti manusia, dan preset yang kuat untuk produktivitas yang lebih baik.">
+    <meta name="keywords"
+        content="auto typer, text automation, free auto typer, auto ketik, otomatisasi teks, software auto ketik, human-like typing, typing bot, macro keyboard, productivity tool, windows, macos, linux, alat produktivitas, otomatisasi pengetikan">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mr-auto-typer.com/">
     <meta property="og:title" content="Mr. Auto Typer - Free Intelligent Text Automation Tool">
-    <meta property="og:description" content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity.">
+    <meta property="og:description"
+        content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity.">
     <meta property="og:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mr-auto-typer.com/">
     <meta property="twitter:title" content="Mr. Auto Typer - Free Intelligent Text Automation Tool">
-    <meta property="twitter:description" content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity.">
+    <meta property="twitter:description"
+        content="Mr. Auto Typer is a free, intelligent text automation tool for Windows, macOS, and Linux. Automate typing with customizable delays, human-like jitter, and powerful presets for enhanced productivity.">
     <meta property="twitter:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ug2yl5wazd");
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
     <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #1a1a1a;
@@ -40,46 +47,54 @@
             --bg: #fafafa;
             --text: #2d2d2d;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
         }
-        
+
         .font-mono {
             font-family: 'JetBrains Mono', monospace;
         }
-        
+
         .hero-bg {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.85)), 
-                        url('resources/hero-keyboard.png') center/cover;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.85)),
+                url('resources/hero-keyboard.png') center/cover;
             min-height: 100vh;
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, var(--secondary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .glass-effect {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .typing-demo {
             border-right: 2px solid var(--secondary);
             animation: blink 1s infinite;
         }
-        
+
         @keyframes blink {
-            0%, 50% { border-color: var(--secondary); }
-            51%, 100% { border-color: transparent; }
+
+            0%,
+            50% {
+                border-color: var(--secondary);
+            }
+
+            51%,
+            100% {
+                border-color: transparent;
+            }
         }
-        
+
         .particle-bg {
             position: absolute;
             top: 0;
@@ -89,7 +104,7 @@
             overflow: hidden;
             z-index: 0;
         }
-        
+
         .particle {
             position: absolute;
             width: 2px;
@@ -98,34 +113,72 @@
             border-radius: 50%;
             opacity: 0.6;
         }
-        
+
         .hover-lift {
             transition: all 0.3s ease;
         }
-        
+
         .hover-lift:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
         }
-        
+
         .nav-blur {
             background: rgba(250, 250, 250, 0.9);
             backdrop-filter: blur(20px);
         }
-        
+
         .feature-card {
             background: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(0, 212, 255, 0.2);
             transition: all 0.3s ease;
         }
-        
+
         .feature-card:hover {
             background: rgba(255, 255, 255, 0.95);
             border-color: var(--secondary);
             transform: translateY(-2px);
         }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-blur border-b border-gray-200">
@@ -138,11 +191,17 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="features.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Features</a>
-                        <a href="download.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Download</a>
-                        <a href="#support" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Support</a>
-                        <a href="https://maulanar.my.id" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About me</a>
+                        <a href="#home"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="features.html"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Features</a>
+                        <a href="download.html"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Download</a>
+                        <a href="#support"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Support</a>
+                        <a href="https://maulanar.my.id"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About
+                            me</a>
                     </div>
                 </div>
             </div>
@@ -161,33 +220,32 @@
                     </h1>
                 </div>
                 <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Intelligent text automation with customizable delays, human-like jitter, and powerful presets. 
-                    Transform your workflow with precision typing control - <span class="text-green-400 font-semibold">100% FREE</span> to use.
+                    Intelligent text automation with customizable delays, human-like jitter, and powerful presets.
+                    Transform your workflow with precision typing control - <span
+                        class="text-green-400 font-semibold">100% FREE</span> to use.
                 </p>
             </div>
-            
+
             <!-- Interactive Demo -->
             <div class="glass-effect rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-2xl font-semibold mb-4">Try It Now</h3>
-                        <textarea 
-                            id="demo-text" 
-                            class="w-full h-32 p-4 rounded-lg bg-gray-800 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Type or paste text here to test auto-typing..."
-                        >Welcome to Mr. Auto Typer! This intelligent tool will help you automate text typing with precision and human-like behavior. Configure your desired speed, add some jitter for realism, and watch the magic happen.</textarea>
+                        <textarea id="demo-text"
+                            class="w-full h-32 p-4 rounded-lg bg-gray-800 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
+                            placeholder="Type or paste text here to test auto-typing...">Welcome to Mr. Auto Typer! This intelligent tool will help you automate text typing with precision and human-like behavior. Configure your desired speed, add some jitter for realism, and watch the magic happen.</textarea>
+                        <div class="flex flex-wrap gap-2 text-xs text-gray-400 font-mono">
+                            <span class="bg-gray-700 px-2 py-1 rounded">Backspace: {backspace}</span>
+                            <span class="bg-gray-700 px-2 py-1 rounded">Delete: {delete}</span>
+                            <span class="bg-gray-700 px-2 py-1 rounded">Enter: {enter}</span>
+                            <span class="bg-gray-700 px-2 py-1 rounded">Tab: {tab}</span>
+                        </div>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium mb-2">Typing Speed (ms)</label>
-                            <input 
-                                type="range" 
-                                id="demo-delay" 
-                                min="50" 
-                                max="500" 
-                                value="150" 
-                                class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                            >
+                            <input type="range" id="demo-delay" min="50" max="500" value="150"
+                                class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
                             <div class="flex justify-between text-xs text-gray-400 mt-1">
                                 <span>Fast</span>
                                 <span id="delay-value">150ms</span>
@@ -196,30 +254,25 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <label class="text-sm font-medium">Human-like Jitter</label>
-                            <button 
-                                id="jitter-toggle" 
-                                class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            >
-                                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"></span>
+                            <button id="jitter-toggle"
+                                class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <span
+                                    class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"></span>
                             </button>
                         </div>
                         <div class="flex gap-4">
-                            <button 
-                                id="start-demo" 
-                                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-                            >
+                            <button id="start-demo"
+                                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                                 Start Typing
                             </button>
-                            <button 
-                                id="stop-demo" 
-                                class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-                            >
+                            <button id="stop-demo"
+                                class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                                 Stop
                             </button>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Visual Keyboard -->
                 <div class="mt-8">
                     <div class="text-sm text-gray-400 mb-2">Visual Keyboard</div>
@@ -228,12 +281,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="download.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
+                <a href="download.html"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
                     Download Now
                 </a>
-                <a href="features.html" class="glass-effect text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
+                <a href="features.html"
+                    class="glass-effect text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
                     Explore Features
                 </a>
             </div>
@@ -246,33 +301,37 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 gradient-text">Built with Modern Technology</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Powered by cutting-edge technologies for optimal performance and native experience across all platforms.
+                    Powered by cutting-edge technologies for optimal performance and native experience across all
+                    platforms.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="feature-card rounded-xl p-8 text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-blue-600">Go</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Golang Backend</h3>
-                    <p class="text-gray-600">High-performance, cross-platform native operations with minimal resource usage.</p>
+                    <p class="text-gray-600">High-performance, cross-platform native operations with minimal resource
+                        usage.</p>
                 </div>
-                
+
                 <div class="feature-card rounded-xl p-8 text-center">
                     <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-purple-600">W</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Wails Framework</h3>
-                    <p class="text-gray-600">Beautiful native GUI integration with web technologies for seamless user experience.</p>
+                    <p class="text-gray-600">Beautiful native GUI integration with web technologies for seamless user
+                        experience.</p>
                 </div>
-                
+
                 <div class="feature-card rounded-xl p-8 text-center">
                     <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-yellow-600">JS</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">JavaScript Frontend</h3>
-                    <p class="text-gray-600">Dynamic, responsive interface with smooth animations and real-time feedback.</p>
+                    <p class="text-gray-600">Dynamic, responsive interface with smooth animations and real-time
+                        feedback.</p>
                 </div>
             </div>
         </div>
@@ -283,30 +342,39 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 gradient-text">Get Started in 4 Simple Steps</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">Start automating your typing tasks in under 2 minutes.</p>
+                <p class="text-xl text-gray-600 leading-relaxed">Start automating your typing tasks in under 2 minutes.
+                </p>
             </div>
-            
+
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <div
+                        class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1</div>
                     <h3 class="text-xl font-semibold mb-2">Open Application</h3>
                     <p class="text-gray-600">Launch Mr. Auto Typer on your system</p>
                 </div>
-                
+
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <div
+                        class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2</div>
                     <h3 class="text-xl font-semibold mb-2">Input Text</h3>
                     <p class="text-gray-600">Paste or type your desired text content</p>
                 </div>
-                
+
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <div
+                        class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3</div>
                     <h3 class="text-xl font-semibold mb-2">Configure Settings</h3>
                     <p class="text-gray-600">Set delay, jitter, loop, and preset options</p>
                 </div>
-                
+
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <div
+                        class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        4</div>
                     <h3 class="text-xl font-semibold mb-2">Start Typing</h3>
                     <p class="text-gray-600">Press Start and watch the automation begin</p>
                 </div>
@@ -315,23 +383,78 @@
     </section>
 
     <!-- Support Section -->
-    <section id="support" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="support" class="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold mb-4 gradient-text">Support the Project</h2>
             <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                If Mr. Auto Typer has helped you and you'd like to say thanks, please consider sponsoring the project. 
-                Your support helps maintain and improve the software for everyone.
+                Mr. Auto Typer is free and open source. If you find it useful, please consider supporting the project
+                with a donation. Your contribution helps maintain and improve the software for everyone.
             </p>
+
+            <div class="bg-white rounded-xl p-8 shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">☕</div>
+                        <h4 class="font-semibold mb-2">Coffee</h4>
+                        <p class="text-sm text-gray-600 mb-4">Buy me a coffee</p>
+                        <button
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('coffee')">
+                            Rp.5000
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🍕</div>
+                        <h4 class="font-semibold mb-2">Lunch</h4>
+                        <p class="text-sm text-gray-600 mb-4">Support a meal</p>
+                        <button
+                            class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('lunch')">
+                            Rp.10.000
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <h4 class="font-semibold mb-2">Sponsor</h4>
+                        <p class="text-sm text-gray-600 mb-4">Become a sponsor</p>
+                        <button
+                            class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('sponsor')">
+                            Rp.100.000
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="download.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
-                    💝 Donate & Download
-                </a>
-                <a href="features.html" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
-                    Learn More
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg hover-lift"
+                    onclick="customDonation()">
+                    Kirim donasi sekarang
+                </button>
+                <a href="https://github.com/sponsors"
+                    class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
+                    GitHub Sponsors
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Donation Modal -->
+    <div id="donation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="text-5xl mb-4">🙏</div>
+            <h3 class="text-2xl font-bold mb-4">Terima Kasih!</h3>
+            <p class="text-gray-600 mb-6" id="modal-message">
+                Dukungan Anda sangat berarti bagi kelangsungan proyek ini.
+            </p>
+            <button onclick="closeModal()"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Tutup
+            </button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
@@ -350,4 +473,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>

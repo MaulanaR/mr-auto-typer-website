@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features - Mr. Auto Typer | Fitur Aplikasi Auto Ketik Gratis</title>
-    <meta name="description" content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation. | Jelajahi fitur-fitur canggih Mr. Auto Typer, termasuk penundaan yang dapat disesuaikan, jitter seperti manusia, fungsi loop, pengelola preset, dan hotkey. Tingkatkan otomatisasi teks Anda.">
-    <meta name="keywords" content="auto typer features, text automation features, auto ketik fitur, aplikasi auto ketik, customizable delay, human-like jitter, loop function, preset manager, hotkeys, fitur otomatisasi teks, demo auto ketik">
+    <meta name="description"
+        content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation. | Jelajahi fitur-fitur canggih Mr. Auto Typer, termasuk penundaan yang dapat disesuaikan, jitter seperti manusia, fungsi loop, pengelola preset, dan hotkey. Tingkatkan otomatisasi teks Anda.">
+    <meta name="keywords"
+        content="auto typer features, text automation features, auto ketik fitur, aplikasi auto ketik, customizable delay, human-like jitter, loop function, preset manager, hotkeys, fitur otomatisasi teks, demo auto ketik">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mr-auto-typer.com/features.html">
     <meta property="og:title" content="Features - Mr. Auto Typer | Fitur Aplikasi Auto Ketik Gratis">
-    <meta property="og:description" content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation.">
+    <meta property="og:description"
+        content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation.">
     <meta property="og:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mr-auto-typer.com/features.html">
     <meta property="twitter:title" content="Features - Mr. Auto Typer | Fitur Aplikasi Auto Ketik Gratis">
-    <meta property="twitter:description" content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation.">
+    <meta property="twitter:description"
+        content="Explore the powerful features of Mr. Auto Typer, including customizable delays, human-like jitter, loop functionality, preset manager, and hotkeys. Enhance your text automation.">
     <meta property="twitter:image" content="https://mr-auto-typer.com/resources/app-mockup.png">
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ug2yl5wazd");
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #1a1a1a;
@@ -39,60 +46,60 @@
             --bg: #fafafa;
             --text: #2d2d2d;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
         }
-        
+
         .font-mono {
             font-family: 'JetBrains Mono', monospace;
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, var(--secondary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .nav-blur {
             background: rgba(250, 250, 250, 0.9);
             backdrop-filter: blur(20px);
         }
-        
+
         .feature-demo {
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(0, 212, 255, 0.2);
             transition: all 0.3s ease;
         }
-        
+
         .feature-demo:hover {
             background: rgba(255, 255, 255, 1);
             border-color: var(--secondary);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
         }
-        
+
         .preset-card {
             background: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(0, 212, 255, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .preset-card:hover {
             background: rgba(255, 255, 255, 0.95);
             border-color: var(--secondary);
             transform: translateY(-2px);
         }
-        
+
         .preset-card.active {
             background: rgba(0, 212, 255, 0.1);
             border-color: var(--secondary);
         }
-        
+
         .control-slider {
             -webkit-appearance: none;
             appearance: none;
@@ -101,7 +108,7 @@
             background: #e5e7eb;
             outline: none;
         }
-        
+
         .control-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -111,7 +118,7 @@
             background: var(--secondary);
             cursor: pointer;
         }
-        
+
         .control-slider::-moz-range-thumb {
             width: 20px;
             height: 20px;
@@ -120,7 +127,7 @@
             cursor: pointer;
             border: none;
         }
-        
+
         .typing-visualization {
             background: #1a1a1a;
             border-radius: 8px;
@@ -133,7 +140,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .typing-cursor {
             display: inline-block;
             width: 2px;
@@ -142,29 +149,72 @@
             animation: blink 1s infinite;
             margin-left: 2px;
         }
-        
+
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
-        
+
         .hover-lift {
             transition: all 0.3s ease;
         }
-        
+
         .hover-lift:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
         }
-        
+
         .chart-container {
-            height: 300px;
-            background: white;
-            border-radius: 8px;
             padding: 16px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-blur border-b border-gray-200">
@@ -177,11 +227,16 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="index.html"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
                         <a href="features.html" class="text-blue-600 px-3 py-2 text-sm font-medium">Features</a>
-                        <a href="download.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Download</a>
-                        <a href="#support" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Support</a>
-                        <a href="https://maulanar.my.id" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About me</a>
+                        <a href="download.html"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Download</a>
+                        <a href="#support"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Support</a>
+                        <a href="https://maulanar.my.id"
+                            class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About
+                            me</a>
                     </div>
                 </div>
             </div>
@@ -198,7 +253,8 @@
                 </h1>
             </div>
             <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-                Explore the comprehensive set of features that make Mr. Auto Typer the ultimate text automation tool - <span class="text-green-400 font-semibold">100% FREE</span> to use.
+                Explore the comprehensive set of features that make Mr. Auto Typer the ultimate text automation tool -
+                <span class="text-green-400 font-semibold">100% FREE</span> to use.
             </p>
         </div>
     </section>
@@ -210,85 +266,85 @@
                 <h2 class="text-3xl font-bold mb-4">Live Feature Demo</h2>
                 <p class="text-gray-600">Experience the power of Mr. Auto Typer with this interactive demonstration.</p>
             </div>
-            
+
             <div class="feature-demo rounded-2xl p-8 max-w-6xl mx-auto">
                 <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Control Panel -->
                     <div class="space-y-6">
                         <div>
                             <h3 class="text-lg font-semibold mb-4">Configuration</h3>
-                            
+
                             <!-- Text Input -->
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Text to Type</label>
-                                <textarea 
-                                    id="demo-text-input" 
-                                    class="w-full h-24 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter text to test auto-typing..."
-                                >Mr. Auto Typer makes text automation simple and efficient. With customizable delays, human-like jitter, and powerful presets, you can automate any typing task with precision and ease.</textarea>
+                                <textarea id="demo-text-input"
+                                    class="w-full h-24 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
+                                    placeholder="Enter text to test auto-typing...">Mr. Auto Typer makes text automation simple and efficient. With customizable delays, human-like jitter, and powerful presets, you can automate any typing task with precision and ease.</textarea>
+                                <div class="flex flex-wrap gap-2 text-[10px] text-gray-500 font-mono">
+                                    <span class="bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">Backspace:
+                                        {backspace}</span>
+                                    <span class="bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">Delete:
+                                        {delete}</span>
+                                    <span class="bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">Enter:
+                                        {enter}</span>
+                                    <span class="bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">Tab:
+                                        {tab}</span>
+                                </div>
                             </div>
-                            
+
                             <!-- Delay Control -->
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Typing Speed</label>
-                                <input 
-                                    type="range" 
-                                    id="demo-delay-control" 
-                                    min="50" 
-                                    max="500" 
-                                    value="150" 
-                                    class="control-slider w-full"
-                                >
+                                <input type="range" id="demo-delay-control" min="50" max="500" value="150"
+                                    class="control-slider w-full">
                                 <div class="flex justify-between text-xs text-gray-500 mt-1">
                                     <span>Fast (50ms)</span>
                                     <span id="demo-delay-value">150ms</span>
                                     <span>Slow (500ms)</span>
                                 </div>
                             </div>
-                            
+
                             <!-- Jitter Control -->
                             <div class="mb-6">
                                 <div class="flex items-center justify-between mb-2">
                                     <label class="text-sm font-medium">Human-like Jitter</label>
-                                    <button 
-                                        id="demo-jitter-toggle" 
-                                        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"></span>
+                                    <button id="demo-jitter-toggle"
+                                        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <span
+                                            class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"></span>
                                     </button>
                                 </div>
-                                <div class="text-xs text-gray-500">Adds small random variations to simulate human typing</div>
+                                <div class="text-xs text-gray-500">Adds small random variations to simulate human typing
+                                </div>
                             </div>
-                            
+
                             <!-- Loop Control -->
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Loop Count</label>
                                 <div class="flex items-center gap-2">
-                                    <button id="demo-loop-decrease" class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center hover:bg-gray-300">-</button>
+                                    <button id="demo-loop-decrease"
+                                        class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center hover:bg-gray-300">-</button>
                                     <span id="demo-loop-count" class="flex-1 text-center font-semibold">1</span>
-                                    <button id="demo-loop-increase" class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center hover:bg-gray-300">+</button>
+                                    <button id="demo-loop-increase"
+                                        class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center hover:bg-gray-300">+</button>
                                 </div>
                                 <div class="text-xs text-gray-500 mt-1">Set to 0 for infinite loop</div>
                             </div>
-                            
+
                             <!-- Control Buttons -->
                             <div class="flex gap-3">
-                                <button 
-                                    id="demo-start-btn" 
-                                    class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-                                >
+                                <button id="demo-start-btn"
+                                    class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                                     Start Demo
                                 </button>
-                                <button 
-                                    id="demo-stop-btn" 
-                                    class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-                                >
+                                <button id="demo-stop-btn"
+                                    class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                                     Stop
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Typing Visualization -->
                     <div class="lg:col-span-2">
                         <h3 class="text-lg font-semibold mb-4">Live Preview</h3>
@@ -296,7 +352,7 @@
                             <div id="demo-typed-text"></div>
                             <span class="typing-cursor" id="demo-cursor"></span>
                         </div>
-                        
+
                         <!-- Performance Metrics -->
                         <div class="grid grid-cols-3 gap-4 mb-6">
                             <div class="text-center">
@@ -312,7 +368,7 @@
                                 <div class="text-xs text-gray-500">WPM</div>
                             </div>
                         </div>
-                        
+
                         <!-- Typing Pattern Chart -->
                         <div class="chart-container" id="typing-chart"></div>
                     </div>
@@ -328,7 +384,7 @@
                 <h2 class="text-3xl font-bold mb-4">Core Features</h2>
                 <p class="text-gray-600">Everything you need for professional text automation.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Free Text Input -->
                 <div class="feature-demo rounded-xl p-8">
@@ -336,22 +392,26 @@
                         <span class="text-2xl">📝</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Free Text Input</h3>
-                    <p class="text-gray-600 mb-4">Type or paste any text content. Supports multi-line text, special characters, and Unicode. No limitations on text length or complexity.</p>
+                    <p class="text-gray-600 mb-4">Type or paste any text content. Supports multi-line text, special
+                        characters, and native commands like <code
+                            class="bg-gray-100 px-1 rounded text-blue-600 font-mono text-xs">{enter}</code> or <code
+                            class="bg-gray-100 px-1 rounded text-blue-600 font-mono text-xs">{tab}</code>.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• Unlimited text length</li>
-                        <li>• Multi-line support</li>
+                        <li>• Special Keys: {backspace}, {delete}</li>
+                        <li>• Actions: {enter}, {tab}</li>
                         <li>• Unicode compatible</li>
-                        <li>• Special characters</li>
                     </ul>
                 </div>
-                
+
                 <!-- Delay Control -->
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">⏱️</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Customizable Delay</h3>
-                    <p class="text-gray-600 mb-4">Set precise intervals between keystrokes from 50ms to 2000ms. Perfect for controlling typing speed and matching human typing patterns.</p>
+                    <p class="text-gray-600 mb-4">Set precise intervals between keystrokes from 50ms to 2000ms. Perfect
+                        for controlling typing speed and matching human typing patterns.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• 50ms to 2000ms range</li>
                         <li>• Real-time adjustment</li>
@@ -359,14 +419,15 @@
                         <li>• Preset speed templates</li>
                     </ul>
                 </div>
-                
+
                 <!-- Jitter -->
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🎲</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Human-like Jitter</h3>
-                    <p class="text-gray-600 mb-4">Add small random variations to delay times, simulating natural human typing patterns. Makes automated typing indistinguishable from manual input.</p>
+                    <p class="text-gray-600 mb-4">Add small random variations to delay times, simulating natural human
+                        typing patterns. Makes automated typing indistinguishable from manual input.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• Natural typing simulation</li>
                         <li>• Configurable variance</li>
@@ -374,14 +435,15 @@
                         <li>• Anti-detection features</li>
                     </ul>
                 </div>
-                
+
                 <!-- Loop Function -->
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🔄</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Loop Functionality</h3>
-                    <p class="text-gray-600 mb-4">Repeat text input a specific number of times or run indefinitely. Perfect for stress testing, demonstrations, or repetitive tasks.</p>
+                    <p class="text-gray-600 mb-4">Repeat text input a specific number of times or run indefinitely.
+                        Perfect for stress testing, demonstrations, or repetitive tasks.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• Fixed loop counts</li>
                         <li>• Infinite looping</li>
@@ -389,14 +451,15 @@
                         <li>• Break conditions</li>
                     </ul>
                 </div>
-                
+
                 <!-- Presets -->
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">💾</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Preset Manager</h3>
-                    <p class="text-gray-600 mb-4">Save and load frequently used configurations. Create presets for different typing scenarios and switch between them instantly.</p>
+                    <p class="text-gray-600 mb-4">Save and load frequently used configurations. Create presets for
+                        different typing scenarios and switch between them instantly.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• Unlimited presets</li>
                         <li>• Import/export functionality</li>
@@ -404,14 +467,15 @@
                         <li>• Preset categories</li>
                     </ul>
                 </div>
-                
+
                 <!-- Hotkeys -->
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">⌨️</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Customizable Hotkeys</h3>
-                    <p class="text-gray-600 mb-4">Set up global keyboard shortcuts for starting, stopping, and controlling the auto-typing process without switching windows.</p>
+                    <p class="text-gray-600 mb-4">Set up global keyboard shortcuts for starting, stopping, and
+                        controlling the auto-typing process without switching windows.</p>
                     <ul class="text-sm text-gray-500 space-y-1">
                         <li>• Global hotkeys</li>
                         <li>• Customizable combinations</li>
@@ -430,7 +494,7 @@
                 <h2 class="text-3xl font-bold mb-4">Preset Gallery</h2>
                 <p class="text-gray-600">Ready-to-use configurations for common typing scenarios.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div class="preset-card rounded-xl p-6" data-preset="fast-typing">
                     <div class="text-center">
@@ -441,7 +505,7 @@
                         <p class="text-sm text-gray-600">50ms delay for quick text entry</p>
                     </div>
                 </div>
-                
+
                 <div class="preset-card rounded-xl p-6" data-preset="normal-typing">
                     <div class="text-center">
                         <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -451,7 +515,7 @@
                         <p class="text-sm text-gray-600">150ms with human-like jitter</p>
                     </div>
                 </div>
-                
+
                 <div class="preset-card rounded-xl p-6" data-preset="slow-typing">
                     <div class="text-center">
                         <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -461,7 +525,7 @@
                         <p class="text-sm text-gray-600">400ms for careful text review</p>
                     </div>
                 </div>
-                
+
                 <div class="preset-card rounded-xl p-6" data-preset="presentation">
                     <div class="text-center">
                         <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -472,62 +536,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Custom Preset Creator -->
-            <div class="feature-demo rounded-xl p-8 max-w-4xl mx-auto">
-                <h3 class="text-xl font-bold mb-4">Create Custom Preset</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium mb-2">Preset Name</label>
-                            <input 
-                                type="text" 
-                                id="preset-name" 
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Enter preset name..."
-                            >
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium mb-2">Description</label>
-                            <textarea 
-                                id="preset-description" 
-                                class="w-full h-20 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Describe your preset..."
-                            ></textarea>
-                        </div>
-                        <button 
-                            id="save-preset-btn" 
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors hover-lift"
-                        >
-                            Save Preset
-                        </button>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold mb-3">Current Settings</h4>
-                        <div class="space-y-2 text-sm">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Delay:</span>
-                                <span id="current-delay">150ms</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Jitter:</span>
-                                <span id="current-jitter">Enabled</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Loop Count:</span>
-                                <span id="current-loop">1</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6">
-                            <h4 class="font-semibold mb-3">Saved Presets</h4>
-                            <div id="saved-presets" class="space-y-2 max-h-32 overflow-y-auto">
-                                <div class="text-sm text-gray-500">No saved presets yet</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
         </div>
     </section>
 
@@ -538,60 +548,138 @@
                 <h2 class="text-3xl font-bold mb-4">Use Cases</h2>
                 <p class="text-gray-600">Discover how Mr. Auto Typer can improve your workflow.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">💼</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Data Entry</h3>
-                    <p class="text-gray-600">Automate repetitive data entry tasks with precise timing and human-like typing patterns to maintain data integrity.</p>
+                    <p class="text-gray-600">Automate repetitive data entry tasks with precise timing and human-like
+                        typing patterns to maintain data integrity.</p>
                 </div>
-                
+
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🎮</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Gaming</h3>
-                    <p class="text-gray-600">Create complex chat macros and automated responses for multiplayer games with realistic typing simulation.</p>
+                    <p class="text-gray-600">Create complex chat macros and automated responses for multiplayer games
+                        with realistic typing simulation.</p>
                 </div>
-                
+
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🎬</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Content Creation</h3>
-                    <p class="text-gray-600">Perfect for video tutorials and demonstrations where you need to show realistic typing without errors.</p>
+                    <p class="text-gray-600">Perfect for video tutorials and demonstrations where you need to show
+                        realistic typing without errors.</p>
                 </div>
-                
+
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🧪</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Testing</h3>
-                    <p class="text-gray-600">Stress test text input fields, forms, and applications with controlled typing patterns and various text inputs.</p>
+                    <p class="text-gray-600">Stress test text input fields, forms, and applications with controlled
+                        typing patterns and various text inputs.</p>
                 </div>
-                
+
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">📚</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Education</h3>
-                    <p class="text-gray-600">Create typing exercises and demonstrations for teaching programming, language learning, or keyboard skills.</p>
+                    <p class="text-gray-600">Create typing exercises and demonstrations for teaching programming,
+                        language learning, or keyboard skills.</p>
                 </div>
-                
+
                 <div class="feature-demo rounded-xl p-8">
                     <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                         <span class="text-2xl">🔧</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Automation</h3>
-                    <p class="text-gray-600">Integrate into larger automation workflows where text input is required but direct API access isn't available.</p>
+                    <p class="text-gray-600">Integrate into larger automation workflows where text input is required but
+                        direct API access isn't available.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Support Section -->
+    <section id="support" class="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 gradient-text">Support the Project</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Mr. Auto Typer is free and open source. If you find it useful, please consider supporting the project
+                with a donation. Your contribution helps maintain and improve the software for everyone.
+            </p>
+
+            <div class="bg-white rounded-xl p-8 shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">☕</div>
+                        <h4 class="font-semibold mb-2">Coffee</h4>
+                        <p class="text-sm text-gray-600 mb-4">Buy me a coffee</p>
+                        <button
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('coffee')">
+                            Rp.5000
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🍕</div>
+                        <h4 class="font-semibold mb-2">Lunch</h4>
+                        <p class="text-sm text-gray-600 mb-4">Support a meal</p>
+                        <button
+                            class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('lunch')">
+                            Rp.10.000
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <h4 class="font-semibold mb-2">Sponsor</h4>
+                        <p class="text-sm text-gray-600 mb-4">Become a sponsor</p>
+                        <button
+                            class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                            onclick="donate('sponsor')">
+                            Rp.100.000
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg hover-lift"
+                    onclick="customDonation()">
+                    Kirim donasi sekarang
+                </button>
+                <a href="https://github.com/sponsors"
+                    class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105 hover-lift">
+                    GitHub Sponsors
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Modal -->
+    <div id="donation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="text-5xl mb-4">🙏</div>
+            <h3 class="text-2xl font-bold mb-4">Terima Kasih!</h3>
+            <p class="text-gray-600 mb-6" id="modal-message">
+                Dukungan Anda sangat berarti bagi kelangsungan proyek ini.
+            </p>
+            <button onclick="closeModal()"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Tutup
+            </button>
+        </div>
+    </div>
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -601,7 +689,7 @@
                     <span class="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">FREE</span>
                 </div>
                 <p class="text-gray-400 mb-4">Intelligent text automation for modern workflows - 100% Free to Use</p>
-                <p class="text-sm text-gray-500">© 2024 Mr. Auto Typer. Open source and free for everyone.</p>
+                <p class="text-sm text-gray-500">© 2025 Mr. Auto Typer. Open source and free for everyone.</p>
             </div>
         </div>
     </footer>
@@ -617,13 +705,12 @@
                 this.startTime = null;
                 this.typingData = [];
                 this.chart = null;
-                
+
                 this.initializeElements();
                 this.setupEventListeners();
                 this.initializeChart();
-                this.loadSavedPresets();
             }
-            
+
             initializeElements() {
                 this.textInput = document.getElementById('demo-text-input');
                 this.delayControl = document.getElementById('demo-delay-control');
@@ -639,28 +726,18 @@
                 this.charsTyped = document.getElementById('demo-chars-typed');
                 this.timeElapsed = document.getElementById('demo-time-elapsed');
                 this.wpmDisplay = document.getElementById('demo-wpm');
-                
-                // Preset elements
-                this.presetName = document.getElementById('preset-name');
-                this.presetDescription = document.getElementById('preset-description');
-                this.savePresetBtn = document.getElementById('save-preset-btn');
-                this.savedPresets = document.getElementById('saved-presets');
-                this.currentDelay = document.getElementById('current-delay');
-                this.currentJitter = document.getElementById('current-jitter');
-                this.currentLoop = document.getElementById('current-loop');
             }
-            
+
             setupEventListeners() {
                 this.delayControl.addEventListener('input', (e) => {
                     const delay = e.target.value;
                     this.delayValue.textContent = `${delay}ms`;
-                    this.updateCurrentSettings();
                 });
-                
+
                 this.jitterToggle.addEventListener('click', () => {
                     const toggle = this.jitterToggle.querySelector('span');
                     const isEnabled = toggle.classList.contains('translate-x-6');
-                    
+
                     if (isEnabled) {
                         this.jitterToggle.classList.remove('bg-blue-600');
                         this.jitterToggle.classList.add('bg-gray-300');
@@ -670,38 +747,30 @@
                         this.jitterToggle.classList.remove('bg-gray-300');
                         toggle.classList.add('translate-x-6');
                     }
-                    
-                    this.updateCurrentSettings();
                 });
-                
+
                 this.loopDecrease.addEventListener('click', () => {
                     const current = parseInt(this.loopCount.textContent);
                     if (current > 0) {
                         this.loopCount.textContent = current - 1;
-                        this.updateCurrentSettings();
                     }
                 });
-                
+
                 this.loopIncrease.addEventListener('click', () => {
                     const current = parseInt(this.loopCount.textContent);
                     if (current < 99) {
                         this.loopCount.textContent = current + 1;
-                        this.updateCurrentSettings();
                     }
                 });
-                
+
                 this.startBtn.addEventListener('click', () => {
                     this.startDemo();
                 });
-                
+
                 this.stopBtn.addEventListener('click', () => {
                     this.stopDemo();
                 });
-                
-                this.savePresetBtn.addEventListener('click', () => {
-                    this.savePreset();
-                });
-                
+
                 // Preset cards
                 document.querySelectorAll('.preset-card').forEach(card => {
                     card.addEventListener('click', () => {
@@ -709,11 +778,11 @@
                     });
                 });
             }
-            
+
             initializeChart() {
                 const chartDom = document.getElementById('typing-chart');
                 this.chart = echarts.init(chartDom);
-                
+
                 const option = {
                     title: {
                         text: 'Typing Pattern',
@@ -742,43 +811,43 @@
                         }
                     }]
                 };
-                
+
                 this.chart.setOption(option);
             }
-            
+
             startDemo() {
                 if (this.isRunning) return;
-                
+
                 const text = this.textInput.value || this.textInput.placeholder;
                 const loopCount = parseInt(this.loopCount.textContent);
-                
+
                 this.isRunning = true;
                 this.currentIndex = 0;
                 this.currentLoop = 0;
                 this.startTime = Date.now();
                 this.typingData = [];
-                
+
                 this.startBtn.textContent = 'Running...';
                 this.startBtn.disabled = true;
-                
+
                 this.typeCharacter(text, loopCount);
             }
-            
+
             stopDemo() {
                 this.isRunning = false;
                 if (this.intervalId) {
                     clearTimeout(this.intervalId);
                 }
-                
+
                 this.startBtn.textContent = 'Start Demo';
                 this.startBtn.disabled = false;
-                
+
                 if (this.startTime) {
                     const elapsed = (Date.now() - this.startTime) / 1000;
                     this.timeElapsed.textContent = `${elapsed.toFixed(1)}s`;
                 }
             }
-            
+
             typeCharacter(text, maxLoops) {
                 if (!this.isRunning || this.currentIndex >= text.length) {
                     if (maxLoops === 0 || this.currentLoop < maxLoops - 1) {
@@ -790,31 +859,31 @@
                         return;
                     }
                 }
-                
+
                 const char = text[this.currentIndex];
                 const delay = parseInt(this.delayControl.value);
                 const jitterEnabled = this.jitterToggle.querySelector('span').classList.contains('translate-x-6');
-                
+
                 let currentDelay = delay;
                 if (jitterEnabled) {
                     const jitter = (Math.random() - 0.5) * 0.4 * delay;
                     currentDelay += jitter;
                 }
-                
+
                 // Update display
                 this.typedText.innerHTML = text.substring(0, this.currentIndex + 1);
                 this.charsTyped.textContent = this.currentIndex + 1;
-                
+
                 // Update metrics
                 if (this.startTime) {
                     const elapsed = (Date.now() - this.startTime) / 1000;
                     this.timeElapsed.textContent = `${elapsed.toFixed(1)}s`;
-                    
+
                     const words = (this.currentIndex + 1) / 5; // Rough word count
                     const wpm = Math.round((words / elapsed) * 60);
                     this.wpmDisplay.textContent = wpm;
                 }
-                
+
                 // Update chart
                 this.typingData.push(currentDelay);
                 if (this.chart && this.typingData.length > 1) {
@@ -828,127 +897,54 @@
                     };
                     this.chart.setOption(option);
                 }
-                
+
                 this.currentIndex++;
-                
+
                 this.intervalId = setTimeout(() => {
                     this.typeCharacter(text, maxLoops);
                 }, currentDelay);
             }
-            
+
             loadPreset(presetName) {
                 // Remove active class from all presets
                 document.querySelectorAll('.preset-card').forEach(card => {
                     card.classList.remove('active');
                 });
-                
+
                 // Add active class to selected preset
                 document.querySelector(`[data-preset="${presetName}"]`).classList.add('active');
-                
+
                 const presets = {
                     'fast-typing': { delay: 50, jitter: false, loop: 1 },
                     'normal-typing': { delay: 150, jitter: true, loop: 1 },
                     'slow-typing': { delay: 400, jitter: false, loop: 1 },
                     'presentation': { delay: 300, jitter: true, loop: 3 }
                 };
-                
+
                 const preset = presets[presetName];
                 if (preset) {
                     this.delayControl.value = preset.delay;
                     this.delayValue.textContent = `${preset.delay}ms`;
-                    
+
                     const toggle = this.jitterToggle.querySelector('span');
                     if (preset.jitter && !toggle.classList.contains('translate-x-6')) {
                         this.jitterToggle.click();
                     } else if (!preset.jitter && toggle.classList.contains('translate-x-6')) {
                         this.jitterToggle.click();
                     }
-                    
+
                     this.loopCount.textContent = preset.loop;
-                    this.updateCurrentSettings();
                 }
             }
-            
-            savePreset() {
-                const name = this.presetName.value.trim();
-                const description = this.presetDescription.value.trim();
-                
-                if (!name) {
-                    alert('Please enter a preset name');
-                    return;
-                }
-                
-                const preset = {
-                    name,
-                    description,
-                    delay: parseInt(this.delayControl.value),
-                    jitter: this.jitterToggle.querySelector('span').classList.contains('translate-x-6'),
-                    loop: parseInt(this.loopCount.textContent),
-                    timestamp: Date.now()
-                };
-                
-                let presets = JSON.parse(localStorage.getItem('mr-auto-typer-presets') || '[]');
-                presets.push(preset);
-                localStorage.setItem('mr-auto-typer-presets', JSON.stringify(presets));
-                
-                this.presetName.value = '';
-                this.presetDescription.value = '';
-                
-                this.loadSavedPresets();
-                
-                // Show success message
-                const originalText = this.savePresetBtn.textContent;
-                this.savePresetBtn.textContent = 'Saved!';
-                this.savePresetBtn.classList.add('bg-green-600');
-                setTimeout(() => {
-                    this.savePresetBtn.textContent = originalText;
-                    this.savePresetBtn.classList.remove('bg-green-600');
-                }, 2000);
-            }
-            
-            loadSavedPresets() {
-                const presets = JSON.parse(localStorage.getItem('mr-auto-typer-presets') || '[]');
-                
-                if (presets.length === 0) {
-                    this.savedPresets.innerHTML = '<div class="text-sm text-gray-500">No saved presets yet</div>';
-                    return;
-                }
-                
-                this.savedPresets.innerHTML = presets.map((preset, index) => `
-                    <div class="flex items-center justify-between p-2 bg-gray-100 rounded">
-                        <div>
-                            <div class="font-semibold text-sm">${preset.name}</div>
-                            <div class="text-xs text-gray-500">${preset.description || 'No description'}</div>
-                        </div>
-                        <button 
-                            class="text-red-500 hover:text-red-700 text-sm" 
-                            onclick="featureDemo.deletePreset(${index})"
-                        >
-                            Delete
-                        </button>
-                    </div>
-                `).join('');
-            }
-            
-            deletePreset(index) {
-                let presets = JSON.parse(localStorage.getItem('mr-auto-typer-presets') || '[]');
-                presets.splice(index, 1);
-                localStorage.setItem('mr-auto-typer-presets', JSON.stringify(presets));
-                this.loadSavedPresets();
-            }
-            
-            updateCurrentSettings() {
-                this.currentDelay.textContent = `${this.delayControl.value}ms`;
-                this.currentJitter.textContent = this.jitterToggle.querySelector('span').classList.contains('translate-x-6') ? 'Enabled' : 'Disabled';
-                this.currentLoop.textContent = this.loopCount.textContent;
-            }
+
+
         }
-        
+
         // Initialize demo when DOM is loaded
         let featureDemo;
         document.addEventListener('DOMContentLoaded', () => {
             featureDemo = new FeatureDemo();
-            
+
             // Animate elements on scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -963,11 +959,12 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             document.querySelectorAll('.feature-demo, .preset-card').forEach(el => {
                 observer.observe(el);
             });
         });
     </script>
 </body>
+
 </html>

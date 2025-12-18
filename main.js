@@ -387,3 +387,67 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Donation functionality
+function donate(type) {
+    const amounts = {
+        coffee: 5000,
+        lunch: 10000,
+        sponsor: 100000
+    };
+
+    const amount = amounts[type];
+    const formattedAmount = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount);
+
+    // Open Saweria in a new tab
+    window.open('https://saweria.co/mrlabs', '_blank');
+    
+    // Show thank you modal
+    showModal(`Terima kasih atas dukungannya sebesar ${formattedAmount}! Support Anda membantu kami menjaga Mr. Auto Typer tetap gratis untuk semua orang.`);
+}
+
+function customDonation() {
+    window.open('https://saweria.co/mrlabs', '_blank');
+    showModal('Terima kasih! Silakan tentukan jumlah donasi Anda di halaman Saweria.');
+}
+
+function showModal(message) {
+    let modal = document.getElementById('donation-modal');
+    if (!modal) return;
+    
+    const modalMessage = document.getElementById('modal-message');
+    if (modalMessage) modalMessage.textContent = message;
+    
+    modal.classList.add('active');
+    
+    // Animate modal content if anime is available
+    if (window.anime) {
+        anime({
+            targets: '#donation-modal .modal-content',
+            scale: [0.9, 1],
+            opacity: [0, 1],
+            duration: 400,
+            easing: 'easeOutElastic(1, .8)'
+        });
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('donation-modal');
+    if (!modal) return;
+    
+    if (window.anime) {
+        anime({
+            targets: '#donation-modal .modal-content',
+            scale: [1, 0.9],
+            opacity: [1, 0],
+            duration: 300,
+            easing: 'easeInQuad',
+            complete: () => {
+                modal.classList.remove('active');
+            }
+        });
+    } else {
+        modal.classList.remove('active');
+    }
+}

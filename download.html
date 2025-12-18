@@ -114,6 +114,43 @@
         .donation-progress {
             background: linear-gradient(90deg, var(--secondary), var(--accent));
         }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
     </style>
 </head>
 
@@ -189,7 +226,7 @@
             </div>
 
             <!-- Download Cards -->
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div id="download-grid" class="grid md:grid-cols-3 gap-8 mb-16">
                 <!-- Windows -->
                 <div class="platform-download download-card rounded-xl p-8 relative" data-platform="windows">
                     <div
@@ -568,6 +605,21 @@
         </div>
     </section>
 
+    <!-- Donation Modal -->
+    <div id="donation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="text-5xl mb-4">🙏</div>
+            <h3 class="text-2xl font-bold mb-4">Terima Kasih!</h3>
+            <p class="text-gray-600 mb-6" id="modal-message">
+                Dukungan Anda sangat berarti bagi kelangsungan proyek ini.
+            </p>
+            <button onclick="closeModal()"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Tutup
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -578,7 +630,7 @@
                     <span class="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">FREE</span>
                 </div>
                 <p class="text-gray-400 mb-4">Intelligent text automation for modern workflows - 100% Free to Use</p>
-                <p class="text-sm text-gray-500">© 2024 Mr. Auto Typer. Open source and free for everyone.</p>
+                <p class="text-sm text-gray-500">© 2025 Mr. Auto Typer. Open source and free for everyone.</p>
             </div>
         </div>
     </footer>
@@ -600,13 +652,29 @@
                     }
                 });
 
-                downloads.forEach(download => {
-                    if (download.dataset.platform === platform) {
-                        download.style.display = 'block';
-                    } else {
-                        download.style.display = 'none';
-                    }
+                const grid = document.getElementById('download-grid');
+
+                // Reset display for all
+                downloads.forEach(d => {
+                    d.style.display = 'none';
+                    d.classList.remove('mx-auto', 'max-w-md', 'w-full');
                 });
+
+                // Set layout based on platform selection
+                if (platform === 'windows' || platform === 'macos' || platform === 'linux') {
+                    grid.classList.remove('grid', 'md:grid-cols-3');
+                    grid.classList.add('flex', 'justify-center');
+
+                    const activeDownload = Array.from(downloads).find(d => d.dataset.platform === platform);
+                    if (activeDownload) {
+                        activeDownload.style.display = 'block';
+                        activeDownload.classList.add('mx-auto', 'max-w-md', 'w-full');
+                    }
+                } else {
+                    grid.classList.add('grid', 'md:grid-cols-3');
+                    grid.classList.remove('flex', 'justify-center');
+                    downloads.forEach(d => d.style.display = 'block');
+                }
             };
 
             tabs.forEach(tab => {
@@ -661,15 +729,49 @@
             };
 
             const amount = amounts[type];
+            const formattedAmount = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount);
 
-            // In a real implementation, this would redirect to payment processor
-            if (confirm(`Proceed with $${amount} donation?`)) {
-                alert(`Thank you for your $${amount} donation!\n\nIn a real implementation, this would redirect to the payment processor.`);
-                window.open('https://saweria.co/mrlabs', '_blank');
-            }
+            // Open Saweria in a new tab
+            window.open('https://saweria.co/mrlabs', '_blank');
+
+            // Show thank you modal
+            showModal(`Terima kasih atas dukungannya sebesar ${formattedAmount}! Support Anda membantu kami menjaga Mr. Auto Typer tetap gratis untuk semua orang.`);
         }
 
         function customDonation() {
-            const amount = prompt('Enter custom donation amount ($):');
+            // Simply redirect to Saweria for custom donation
+            window.open('https://saweria.co/mrlabs', '_blank');
+            showModal('Terima kasih! Silakan tentukan jumlah donasi Anda di halaman Saweria.');
+        }
+
+        function showModal(message) {
+            const modal = document.getElementById('donation-modal');
+            const modalMessage = document.getElementById('modal-message');
+            modalMessage.textContent = message;
+            modal.classList.add('active');
+
+            // Animate modal content
+            anime({
+                targets: '.modal-content',
+                scale: [0.9, 1],
+                opacity: [0, 1],
+                duration: 400,
+                easing: 'easeOutElastic(1, .8)'
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('donation-modal');
+
+            anime({
+                targets: '.modal-content',
+                scale: [1, 0.9],
+                opacity: [1, 0],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    modal.classList.remove('active');
+                }
+            });
         }
     
